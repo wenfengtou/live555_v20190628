@@ -1,4 +1,4 @@
-INCLUDES = -Iinclude -I../UsageEnvironment/include
+INCLUDES = -Iinclude
 PREFIX = /usr/local
 LIBDIR = $(PREFIX)/lib
 ##### Change the following for your environment:
@@ -32,7 +32,7 @@ all:	$(ALL)
 
 LIVELOG_LIB_OBJS = Livetrace.$(OBJ)
 
-Livetrace.$(CPP):	Livetrace.hh
+Livetrace.$(CPP):	include/Livetrace.hh
 
 liblivelog.$(LIB_SUFFIX): $(LIVELOG_LIB_OBJS) \
     $(PLATFORM_SPECIFIC_LIB_OBJS)

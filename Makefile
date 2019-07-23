@@ -22,6 +22,7 @@ LIVEMEDIA_DIR = liveMedia
 GROUPSOCK_DIR = groupsock
 USAGE_ENVIRONMENT_DIR = UsageEnvironment
 BASIC_USAGE_ENVIRONMENT_DIR = BasicUsageEnvironment
+LIVELOG_DIR = livelog
 
 TESTPROGS_DIR = testProgs
 
@@ -30,6 +31,7 @@ MEDIA_SERVER_DIR = mediaServer
 PROXY_SERVER_DIR = proxyServer
 
 all:
+	cd $(LIVELOG_DIR) ; $(MAKE)
 	cd $(LIVEMEDIA_DIR) ; $(MAKE)
 	cd $(GROUPSOCK_DIR) ; $(MAKE)
 	cd $(USAGE_ENVIRONMENT_DIR) ; $(MAKE)
@@ -50,6 +52,7 @@ install:
 	cd $(PROXY_SERVER_DIR) ; $(MAKE) install
 
 clean:
+	cd $(LIVELOG_DIR) ; $(MAKE) clean
 	cd $(LIVEMEDIA_DIR) ; $(MAKE) clean
 	cd $(GROUPSOCK_DIR) ; $(MAKE) clean
 	cd $(USAGE_ENVIRONMENT_DIR) ; $(MAKE) clean

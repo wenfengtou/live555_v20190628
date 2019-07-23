@@ -1,4 +1,4 @@
-INCLUDES = -Iinclude -I../UsageEnvironment/include -I../groupsock/include
+INCLUDES = -Iinclude -I../UsageEnvironment/include -I../groupsock/include -I../livelog/include
 PREFIX = /usr/local
 LIBDIR = $(PREFIX)/lib
 ##### Change the following for your environment:
@@ -84,7 +84,8 @@ LIVEMEDIA_LIB_OBJS = Media.$(OBJ) $(MISC_SOURCE_OBJS) $(MISC_SINK_OBJS) $(MISC_F
 $(LIVEMEDIA_LIB): $(LIVEMEDIA_LIB_OBJS) \
     $(PLATFORM_SPECIFIC_LIB_OBJS)
 	$(LIBRARY_LINK)$@ $(LIBRARY_LINK_OPTS) \
-		$(LIVEMEDIA_LIB_OBJS)
+		$(LIVEMEDIA_LIB_OBJS) \
+		../livelog/liblivelog.a
 
 Media.$(CPP):		include/Media.hh
 include/Media.hh:	include/liveMedia_version.hh
