@@ -1,0 +1,9 @@
+ Stack Trace: 
+ [0] ./live555MediaServer() [0x476c1d] 
+ [1] ./live555MediaServer() [0x406586] 
+ [2] ./live555MediaServer() [0x4079f2] 
+ [3] ./live555MediaServer() [0x404f51] 
+ [4] ./live555MediaServer() [0x404ebf] 
+ [5] ./live555MediaServer() [0x477d53] 
+ [6] ./live555MediaServer() [0x47a5b0] 
+ [7] ./live555MediaServer() [0x4026f7] 
