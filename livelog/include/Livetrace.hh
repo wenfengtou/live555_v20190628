@@ -1,6 +1,8 @@
-#include <execinfo.h>
-#include <stdio.h>
+#ifndef _LIVE_TRACK_HH
+#define _LIVE_TRACK_HH
 
 #define MAX_DEPTH 20
 
-static void print_stackframe(void);
+void print_stackframe();
+
+#endif

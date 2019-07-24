@@ -31,9 +31,9 @@ MEDIA_SERVER_DIR = mediaServer
 PROXY_SERVER_DIR = proxyServer
 
 all:
-	cd $(LIVELOG_DIR) ; $(MAKE)
 	cd $(LIVEMEDIA_DIR) ; $(MAKE)
 	cd $(GROUPSOCK_DIR) ; $(MAKE)
+	cd $(LIVELOG_DIR) ; $(MAKE)
 	cd $(USAGE_ENVIRONMENT_DIR) ; $(MAKE)
 	cd $(BASIC_USAGE_ENVIRONMENT_DIR) ; $(MAKE)
 	cd $(TESTPROGS_DIR) ; $(MAKE)

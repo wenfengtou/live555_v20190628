@@ -23,7 +23,7 @@ along with this library; if not, write to the Free Software Foundation, Inc.,
 #include "RTSPRegisterSender.hh"
 #include "Base64.hh"
 #include <GroupsockHelper.hh>
-//#include <Livetrace.hh>
+#include <Livetrace.hh>
 
 ////////// RTSPServer implementation //////////
 
@@ -33,7 +33,6 @@ RTSPServer::createNew(UsageEnvironment& env, Port ourPort,
 		      unsigned reclamationSeconds) {
   int ourSocket = setUpOurSocket(env, ourPort);
   if (ourSocket == -1) return NULL;
-  //print_stackframe();
   return new RTSPServer(env, ourSocket, ourPort, authDatabase, reclamationSeconds);
 }
 
@@ -290,6 +289,7 @@ RTSPServer::RTSPClientConnection::~RTSPClientConnection() {
 // Handler routines for specific RTSP commands:
 
 void RTSPServer::RTSPClientConnection::handleCmd_OPTIONS() {
+  print_stackframe();
   snprintf((char*)fResponseBuffer, sizeof fResponseBuffer,
 	   "RTSP/1.0 200 OK\r\nCSeq: %s\r\n%sPublic: %s\r\n\r\n",
 	   fCurrentCSeq, dateHeader(), fOurRTSPServer.allowedCommandNames());
