@@ -4,6 +4,7 @@ libliveMedia_LIB_SUFFIX = $(LIB_SUFFIX)
 libBasicUsageEnvironment_LIB_SUFFIX = $(LIB_SUFFIX)
 libUsageEnvironment_LIB_SUFFIX = $(LIB_SUFFIX)
 libgroupsock_LIB_SUFFIX = $(LIB_SUFFIX)
+liblivelog_LIB_SUFFIX = $(LIB_SUFFIX)
 ##### Change the following for your environment:
 COMPILE_OPTS =		$(INCLUDES) -I. -g -DSOCKLEN_T=socklen_t -D_LARGEFILE_SOURCE=1 -D_FILE_OFFSET_BITS=64
 C =			c
@@ -92,7 +93,7 @@ LIVEMEDIA_LIB = $(LIVEMEDIA_DIR)/libliveMedia.$(libliveMedia_LIB_SUFFIX)
 GROUPSOCK_DIR = ../groupsock
 GROUPSOCK_LIB = $(GROUPSOCK_DIR)/libgroupsock.$(libgroupsock_LIB_SUFFIX)
 LIVELOG_DIR = ../livelog
-LIVELOG_LIB = $(LIVELOG_DIR)/liblivelog.$(libgroupsock_LIB_SUFFIX)
+LIVELOG_LIB = $(LIVELOG_DIR)/liblivelog.$(liblivelog_LIB_SUFFIX)
 LOCAL_LIBS =	$(LIVEMEDIA_LIB) $(GROUPSOCK_LIB) $(LIVELOG_LIB) \
 		$(BASIC_USAGE_ENVIRONMENT_LIB) $(USAGE_ENVIRONMENT_LIB)
 LIBS =			$(LOCAL_LIBS) $(LIBS_FOR_CONSOLE_APPLICATION)
